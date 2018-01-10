@@ -74,9 +74,6 @@ class StartPage(tk.Frame):
                     info=[]
                     line=line.replace('\n','').split(',')
                     if usernameentry.get() and passwordentry.get() in line:
-                        list=self.grid_slaves()
-                        for l in list:
-                            l.destroy()
                         controller.show_frame(PageOne)
                         
         #page1

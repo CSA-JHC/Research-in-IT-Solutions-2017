@@ -1,11 +1,9 @@
 import tkinter as tk
  
-########################################################################
 class MyApp(object):
     """"""
- 
-    #----------------------------------------------------------------------
-    def __init__(self, parent):
+
+     def __init__(self, parent):
         """Constructor"""
         self.root = parent
         self.root.title("Main frame")
@@ -15,12 +13,10 @@ class MyApp(object):
         btn = tk.Button(self.frame, text="Open Frame", command=self.openFrame)
         btn.pack()
  
-    #----------------------------------------------------------------------
     def hide(self):
         """"""
         self.root.withdraw()
  
-    #----------------------------------------------------------------------
     def openFrame(self):
         """"""
         self.hide()
@@ -31,20 +27,16 @@ class MyApp(object):
         btn = tk.Button(otherFrame, text="Close", command=handler)
         btn.pack()
  
-    #----------------------------------------------------------------------
     def onCloseOtherFrame(self, otherFrame):
         """"""
         otherFrame.destroy()
         self.show()
  
-    #----------------------------------------------------------------------
     def show(self):
         """"""
         self.root.update()
         self.root.deiconify()
  
- 
-#----------------------------------------------------------------------
 if __name__ == "__main__":
     root = tk.Tk()
     root.geometry("800x600")
